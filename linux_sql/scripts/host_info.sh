@@ -24,9 +24,6 @@ l2_cache=$(echo "$lscpu_out" | egrep "L2 cache:" | awk -F ":" '{print $2}' | sed
 total_mem=$(grep MemTotal /proc/meminfo | awk -F ":" '{print $2}' | sed 's/kB//' | xargs)
 timestamp=$(date +%F_%T | sed 's/_/ /' | xargs)
 
-
-#PSQL command: Inserts server usage data into host_usage table
-#Note: be careful with double and single quotes
 insert_stmt="INSERT INTO host_info ( hostname,cpu_number,cpu_architecture,cpu_model,cpu_mhz,L2_cache,total_mem,timestamp) VALUES('$hostname', '$cpu_number', '$cpu_architecture', '$cpu_model', '$cpu_mhz', '$l2_cache', '$total_mem', '$timestamp');"
 
 psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
