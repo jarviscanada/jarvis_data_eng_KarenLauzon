@@ -14,10 +14,11 @@ CREATE TABLE PUBLIC.host_info
 CREATE TABLE PUBLIC.host_usage
   (
      timestamp      TIMESTAMP NOT NULL,
-     host_id        SERIAL NOT NULL FOREIGN KEY,
+     host_id        INT NOT NULL,
      memory_free    INT NOT NULL,
      cpu_idle       INT NOT NULL,
      cpu_kernel     INT NOT NULL,
      disk_io        INT NOT NULL,
-     disk_available INT NOT NULL
+     disk_available INT NOT NULL,
+     FOREIGN KEY(host_id) REFERENCES Public.host_info(id)
   );
