@@ -52,6 +52,9 @@ highlighted_projects:
   - name: "Android application for finding google earth images"
     git_url: "https://github.com/lauz0160/FinalProject"
     description: Created an application that takes a users input of latitude and longitude and displays the google earth image at that location. Project used APi, Java, Android emulators, and HTML.
+  - name: ""
+      git_url:
+      description:
 
 professional_experience:
   - title: "Software Developer"
@@ -72,4 +75,24 @@ education:
       - "Graduated with Honours"
       - "Dean's List (2020, 2021)"
       - "GPA: 3.7/4.0"
+  - school_name: ""
+      duration: ""
+      degree: ""
+      department: ""
+      awards_achievements:
 
+#Optional section
+others:
+  #category
+  - title: ""
+    #list of items
+    bullets:
+      - ""
+  - title: ""
+    bullets:
+      - ""
+  - title: ""
+    bullets:
+      - ""
+      - ""
+      - ""
