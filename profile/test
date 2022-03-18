@@ -72,7 +72,7 @@ jarvis_projects:
 # Feel free to add more projects
 # Please read the project description guideline carefully. Make sure you follow the simplified SDLC pattern. (t.ly/NlXQ)
 highlighted_projects:
-  #project name
+    #project name
   - name: "Android application for finding google earth images"
     #URL is optional
     git_url: "https://github.com/lauz0160/FinalProject"
@@ -98,13 +98,13 @@ professional_experience:
     description: "Utilized tools and basic troubleshooting skills to assist clients in problem solving their software and hardware issues remotely. Explained solutions to clients in non technical, easy to follow instructions."
 
 #List of edcuation
-education:
+education: 
   - school_name: "Algonquin College"
     duration: "2019-2021"
     degree: "Bachelor of Computer Science"
     department: "Computer Programming"
     # optional
-    awards_achievements:
+    awards_achievements: 
       - "Graduated with Honours"
       - "Dean's List (2020, 2021)"
       - "GPA: 3.7/4.0"
@@ -112,11 +112,11 @@ education:
     duration: " "
     degree: " "
     department: " "
-    awards_achievements:
+    awards_achievements: 
 
 #Optional section
 others:
-  #category
+    #category
   - title: " "
     #list of items
     bullets:
