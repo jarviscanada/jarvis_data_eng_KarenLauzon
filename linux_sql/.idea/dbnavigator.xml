@@ -28,11 +28,18 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="101c5ace-6e99-4424-985b-359b4f8ca09c">
-      <console name="host_agent" type="STANDARD" schema="information_schema" session="Main" />
+      <console name="host_agent" type="STANDARD" schema="public" session="Main"><![CDATA[select host_id, hostname, date_trunc('hour', host_usage.timestamp) + date_part('minute', host_usage.timestamp):: int / 5 * interval '5 min' as timenew,
+	round((avg( total_mem - (memory_free*10000))/total_mem *100),3) As avg_used_mem_percentage
+from host_info
+join host_usage on host_info.id  = host_usage.host_id
+GROUP BY host_id, hostname, timenew, total_mem
+order by timenew  ;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="101c5ace-6e99-4424-985b-359b4f8ca09c" object-ref="consoles/host_agent" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="101c5ace-6e99-4424-985b-359b4f8ca09c" />
