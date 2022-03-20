@@ -1,4 +1,4 @@
-# JKaren Lauzon . Jarvis Consulting
+# Karen Lauzon . Jarvis Consulting
 
 I was a computer Programming student at Algonquin College, we learned a wide spread of basic computer knowledge as well as studied the more common programming languages and completed many projects using these skills. I enjoy all things computer and technology-related, however, I have not had much experience in a professional environment. I have taken optional courses in programming and computer science since I was in high school where I put my problem-solving abilities to use building computer games. I started at Carleton University before realizing that the courses that captured my attention were computer-based ones, and I have been looking to improve my skills in the field ever since.
 
