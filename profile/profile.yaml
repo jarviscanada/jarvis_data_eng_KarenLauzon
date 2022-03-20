@@ -78,9 +78,6 @@ highlighted_projects:
     git_url: "https://github.com/lauz0160/FinalProject"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: Created an application that takes a users input of latitude and longitude and displays the google earth image at that location. Project used APi, Java, Android emulators, and HTML.
-  - name: " "
-    git_url:
-    description:
 
 #List of professional experience
 # Please read the project description guideline carefully. Make sure you follow the simplified SDLC pattern. (t.ly/NlXQ)
@@ -108,24 +105,8 @@ education:
       - "Graduated with Honours"
       - "Dean's List (2020, 2021)"
       - "GPA: 3.7/4.0"
-  - school_name: " "
-    duration: " "
-    degree: " "
-    department: " "
-    awards_achievements:
-
-#Optional section
 others:
-  #category
-  - title: " "
-    #list of items
+  - title: "  "
+      #list of items
     bullets:
-      - " "
-  - title: " "
-    bullets:
-      - " "
-  - title: " "
-    bullets:
-      - " "
-      - " "
-      - " "
+        - "    "
