@@ -40,15 +40,39 @@ The following are the scripts used in this project:
   - The user must enter one of the three options, Create, Start, Stop, when running the command. If a matching argument is not provided the command will return an error
   - If the user selects "Create" as the command argument the username and password for the database must also be provided otherwise the script will return an error
 - host_info.sh
-  - The host script finds your computer's system information, then inserts it into the host_info table in the database
+  - The host_info script finds your computer's system information, then inserts it into the host_info table in the database
+  - This script runs once per computer to gather the system info for setting up the database
   - The command to run the script is as follows:</br>
     `./scripts/host_info.sh psql_host psql_port db_name psql_user psql_password`
+  - All the required fields must be provided otherwise the script with throw an error requesting the missing information
+  - Example of the command as follows: </br>
+    `./scripts/host_info.sh localhost 5432 host_agent postgres password`
 - host_usage.sh
+  - The host_usage script finds your systems' usage information including disk space, memory available, kernel data and the timestamp of when all the information was gathered.
+  - This script is run every minute by the crontab, it gathers information as it changes to show patterns in the data
+  - The command to run the script is as follows:</br>
+    `./scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password`
+  - All the required fields must be provided otherwise the script with throw an error requesting the missing information
+  - Example of the command as follows: </br>
+    `./scripts/host_usage.sh localhost 5432 host_agent postgres password`
 - crontab
-- queries.sql (describe what business problem you are trying to resolve)
+  - the crontab is a job scheduler, it will systematically run scripts at given intervals of time as requested by the user
+  - the crontab is set up tp run the host_usage script every minute once being set up
+  - the command to open the crontab editor is: `crontab -e`
+  - to the crontab editor add the following command: </br>
+    `* * * * * bash /home/centos/dev/jrvs/bootcamp/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password`
+    - The 5 stars tell the crontab to run this command every minute
+  - To ensure it is working query the database and select all the records in the host_usage table. there should be new records every minute.
+- queries.sql
+  - The queries.sql file contain common queries that might be helpful for the user to run on the database to effectively use the data it provides
+  - There are 3 sample queries in the file:
+    - The first query displays all entries in the host_info table by which has the most total memory. This is helpful for the user to see what each system is capable of doing
+    - The second query displays the average memory of each system over a period of 5 minutes. This shows the user which systems are using the most space and which systems will require additional nodes to handle any extra workload.
+    - The third query is to ensure the crontab has not failed at any point during the period of time the results are being used for data analysis as this would change some results of the queries. 
+      If displays any period of 5 minutes where there was less than 3 data entries given by the crontab. Since the crontab works every minute than in each 5 minute interval there should be 5 entries, anything less is the crontab failing
 
 ## Database Modeling
-Describe the schema of each table using markdown table syntax (do not put any sql code)
+
 - | host_info        |                   |
   |------------------|--------------------|
   | id               | serial    NOT NULL |
@@ -72,14 +96,12 @@ Describe the schema of each table using markdown table syntax (do not put any sq
   | cpu_idle       | int       NOT NULL |
 
 # Test
-How did you test your bash scripts and SQL queries? What was the result?
+The bash scripts were tested by using queries to view the database was constructed correctly. The sql queries were tested by running each individual section of the query on its own to ensure that it all functions as  it should.
 
 # Deployment
-How did you deploy your app? (e.g. Github, crontab, docker)
+The tool has been deployed to GitHub where it can be forked and downloaded to any computer and set u using the quick setup instructions.
 
 # Improvements
-Write at least three things you want to improve
-e.g.
-- handle hardware update
-- blah
-- blah
+- This project should be able to be setup with a setup script that the user can run to eliminate all the lines of code they must enter using the current quick setup guide
+- This tool should be able to accept any info regarding hardware changes which would change the info in the host_info table
+- More sample queries should be given using the other information in the database, such as how hard the cpus are working in each system
