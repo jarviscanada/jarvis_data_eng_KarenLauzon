@@ -15,7 +15,7 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_KarenLauzon",
   "highlighted_projects": [
     {
-      "description": "Created an application that takes a users input of latitude and longitude and displays the google earth image at that location. Project used APi, Java, Android emulators, and HTML.",
+      "description": "Created an application that takes a users input of latitude and longitude and displays the google earth image at that location. Project used API, Java, Android emulators, and HTML.",
       "git_url": "https://github.com/lauz0160/FinalProject",
       "name": "Android application for finding google earth images"
     }
@@ -25,78 +25,46 @@
       "description": "Developed a tool that grabs computers hardware and usage information and sends the information to a database. This tool is implemented on a cluster system to get details of the efficiency of each node in the cluster. The project uses Java, crontabs, bash, scripts, and postgresql.",
       "git_url": "/linux_sql",
       "name": "Linux Cluster Resource Monitoring App"
-    },
-    {
-      "description": [
-        "Twitter CRUD App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      ],
-      "git_url": "/core_java",
-      "name": "Core Java Apps"
-    },
-    {
-      "description": "",
-      "git_url": "/springboot",
-      "name": "Spring RESTful Microservices App"
-    },
-    {
-      "description": "",
-      "git_url": "/python_data_anlytics",
-      "name": "Python Data Analytics"
-    },
-    {
-      "description": "",
-      "git_url": "/hadoop",
-      "name": "Hadoop"
-    },
-    {
-      "description": "",
-      "git_url": "/spark",
-      "name": "Spark"
-    },
-    {
-      "description": "",
-      "git_url": "/cloud_devops",
-      "name": "Cloud/DevOps"
     }
   ],
   "name": "Karen Lauzon",
   "others": [
     {
       "bullets": [
-        "    "
+        "I enjoy reading fantasy novels",
+        "I like spending my free time gaming with friends around the world",
+        "I like learning new things"
       ],
-      "title": "  "
+      "title": "Hobbies  "
     }
   ],
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Develops projects using java, Linux, Bash, Databases, SQL, and Git. The requirements and purpose of the projects are defined by the client needs and a solution is formed, developed, and implemented.",
+      "description": "Develops projects using Java, Linux, Bash, Databases, SQL, and Git. The requirements and purpose of the projects are defined by the client needs and a solution is formed, developed, and implemented.",
       "duration": "2022-present",
       "title": "Software Developer"
     },
     {
       "company": "RCMP Help Desk",
-      "description": "Utilized tools and basic troubleshooting skills to assist clients in problem solving their software and hardware issues remotely. Explained solutions to clients in non technical, easy to follow instructions.",
+      "description": "Utilized tools and basic troubleshooting skills to assist clients in problem solving their software and hardware issues remotely. Explained solutions to clients in non-technical, easy-to-follow instructions.",
       "duration": "2020-2021",
       "title": "Co-op Level 1 Analyst"
     }
   ],
   "skills": {
     "competent": [
-      "Eclipse/IDE",
-      "SDLC",
       "Python",
+      "Eclipse",
+      "SDLC",
       "HTML/CSS",
       "Android Studios"
     ],
     "familiar": [
       "COBOL",
-      "Wireshark",
       "Maven",
-      "Hardware/Software Troubleshooting",
+      "IntelliJ",
+      "Wireshark",
       "AutoCAD"
     ],
     "proficient": [
@@ -107,5 +75,5 @@
       "Git"
     ]
   },
-  "summary": "I was a computer Programming student at Algonquin College, we learned a wide spread of basic computer knowledge as well as studied the more common programming languages and completed many projects using these skills. I enjoy all things computer and technology-related, however, I have not had much experience in a professional environment. I have taken optional courses in programming and computer science since I was in high school where I put my problem-solving abilities to use building computer games. I started at Carleton University before realizing that the courses that captured my attention were computer-based ones, and I have been looking to improve my skills in the field ever since."
+  "summary": "I am a recent Computer Programming graduate from Algonquin College, where I developed my computer skills and learned new programming languages. I enjoy all things computer and technology-related, but it took me a while to find my passion. I started my post-secondary education at Carleton University where I studied Civil engineering. I quickly realized that the courses I enjoyed the most were the computer-based ones, and I switched to Computer Programming at Algonquin. Since high school I have always taken optional courses in programming and computer science. Over the years, I have done a few small projects in these courses, like creating small 2D games or simple card games, and I have been looking to improve my skills ever since. Now I am working for Jarvis where I can develop my skills even further."
 }
