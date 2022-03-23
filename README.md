@@ -1,6 +1,6 @@
 # Karen Lauzon . Jarvis Consulting
 
-I am a recent Computer Programming graduate from Algonquin College, where I developed my computer skills and learned new programming languages. I enjoy all things computer and technology-related, but it took me a while to find my passion. I started my post-secondary education at Carleton University where I studied Civil engineering. I quickly realized that the courses I enjoyed the most were the computer-based ones, and I switched to Computer Programming at Algonquin. Since high school I have always taken optional courses in programming and computer science. Over the years, I have done a few small projects in these courses, like creating small 2D games or simple card games, and I have been looking to improve my skills ever since. Now I am working for Jarvis where I can develop my skills even further.
+I am a recent Computer Programming graduate from Algonquin College, where I developed my computer skills and learned new programming languages such as java and python. I enjoy all things computer and technology-related, but it took me a while to find my passion. I started my post-secondary education at Carleton University where I studied Civil engineering. I quickly realized that the courses I enjoyed the most were the computer-based ones, and I switched to Computer Programming at Algonquin. Since high school I have always taken optional courses in programming and computer science. Over the years, I have done a few small projects in these courses, like creating small 2D games or simple card games using Unity, and I have been looking to improve my skills ever since. Now I am working for Jarvis where I can develop my skills even further.
 
 ## Skills
 
@@ -37,6 +37,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_KarenLauzo
 
 
 ## Miscellaneous
-- I enjoy reading fantasy novels
-- I like spending my free time gaming with friends around the world
-- I like learning new things
+- I enjoy reading fantasy novels.
+- I like spending my free time playing co-op games with friends around the world.
+- I like learning new things.
