@@ -6,8 +6,12 @@ import com.sun.org.slf4j.internal.LoggerFactory;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static java.nio.file.Files.readAllLines;
 
 public class JavaGrepImp implements JavaGrep{
 
@@ -26,8 +30,8 @@ public class JavaGrepImp implements JavaGrep{
 
         JavaGrepImp javaGrepImp = new JavaGrepImp();
         javaGrepImp.setRegex(args[0]);
-        javaGrepImp.setOutFile(args[1]);
-        javaGrepImp.setRootPath(args[2]);
+        javaGrepImp.setOutFile(args[2]);
+        javaGrepImp.setRootPath(args[1]);
 
         try{
             javaGrepImp.process();
@@ -38,7 +42,7 @@ public class JavaGrepImp implements JavaGrep{
 
     @Override
     public void process() throws IOException {
-        List<String> matchedLines = null;
+        List<String> matchedLines = new ArrayList<>();
         for(File file: listFiles(getRootPath())){
             for(String line : readLines(file)){
                 if(containsPattern(line)){
@@ -52,11 +56,28 @@ public class JavaGrepImp implements JavaGrep{
     @Override
     public List<File> listFiles(String rootDir) {
         File dir = new File(rootDir);
-        return Arrays.asList(dir.listFiles());
+        List<File> listOfFiles = new ArrayList<>();
+        for(File file : dir.listFiles()){
+            if(file.isDirectory()){
+                listOfFiles = listFiles(file.getPath());
+            }
+            else{
+                listOfFiles.add(file);
+            }
+        }
+        return listOfFiles;
     }
 
     @Override
     public List<String> readLines(File inputFile) {
+        try {
+            if(inputFile.isFile()) {
+                return Files.readAllLines(inputFile.toPath());
+            }
+        } catch (Exception ex){
+            JavaGrepImp javaGrepImp = new JavaGrepImp();
+            javaGrepImp.logger.error("Error: Unable to process", ex);
+        }
         return Arrays.asList(inputFile.list());
     }
 
