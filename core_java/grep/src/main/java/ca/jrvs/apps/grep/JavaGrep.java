@@ -3,17 +3,18 @@ package ca.jrvs.apps.grep;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Stream;
 
 public interface JavaGrep {
     void process() throws IOException;
 
-    List<File> listFiles(String rootDir);
+    Stream<File> listFiles(String rootDir);
 
-    List<String> readLines(File inputFile);
+    Stream<String> readLines(File inputFile);
 
     boolean containsPattern(String line);
 
-    void writeToFile(List<String> lines) throws IOException;
+    void writeToFile(Stream<String> lines) throws IOException;
 
     String getRootPath();
 
