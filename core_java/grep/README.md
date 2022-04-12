@@ -27,7 +27,10 @@ This issue can be solved by using streams which are able to process larger amoun
 Sample files were created and placed in testing folders. these files were searched for the regex using the command line. The program was tested by comparing the output files of the command line file to the application file.
 
 # Deployment
-How you dockerize your app for easier distribution?
+Dockerizing the application stores an image of the project on the dockerhub. This makes it easy and fast for any user to run the container as it stores not only the project info but the system information required to run the application as well.
+
 
 # Improvement
-List three things you can improve in this project.
+- Add the ability to display which file the lines come from
+- Add the ability to display the file names or the lines
+- Add the ability to display how many times the regex is matched in a file
