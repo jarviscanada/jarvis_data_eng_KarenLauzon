@@ -72,13 +72,13 @@ public class JavaGrepImp implements JavaGrep{
     public Stream<String> readLines(File inputFile) {
         try {
             if(inputFile.isFile()) {
-                return Stream.of(Files.readAllLines(inputFile.toPath()).toString());
+                return Files.readAllLines(inputFile.toPath()).stream();
             }
         } catch (Exception ex){
             JavaGrepImp javaGrepImp = new JavaGrepImp();
             javaGrepImp.logger.error("Error: Unable to process", ex);
         }
-        return Arrays.asList(inputFile.list()).stream();
+        return Stream.of("");
     }
 
     @Override
