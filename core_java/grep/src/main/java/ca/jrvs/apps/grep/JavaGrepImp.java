@@ -1,5 +1,6 @@
 package ca.jrvs.apps.grep;
 
+import org.apache.log4j.BasicConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,7 +27,7 @@ public class JavaGrepImp implements JavaGrep{
             throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
         }
 
-        //BasicConfigurator.configure();
+        BasicConfigurator.configure();
 
         JavaGrepImp javaGrepImp = new JavaGrepImp();
         javaGrepImp.setRegex(args[0]);
