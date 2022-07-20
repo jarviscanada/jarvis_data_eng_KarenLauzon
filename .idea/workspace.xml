@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b21552c-2822-49a1-8871-8c99d5cc65e9" name="Changes" comment="" />
+    <list default="true" id="7b21552c-2822-49a1-8871-8c99d5cc65e9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarvis_data_eng_karen.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core_java/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core_java/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_java/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core_java/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_java/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core_java/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core_java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_java/grep/out/grep_2022-03-30_01:18:08.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_java/grep/out/grep_2022-03-30_01:18:09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_java/twitter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core_java/twitter/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux_sql/scripts/host_info.sh" beforeDir="false" afterPath="$PROJECT_DIR$/linux_sql/scripts/host_info.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux_sql/scripts/host_usage.sh" beforeDir="false" afterPath="$PROJECT_DIR$/linux_sql/scripts/host_usage.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux_sql/sql/ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/linux_sql/sql/ddl.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/java/codingChallenge/CountPrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/codingChallenge/CountPrimes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/java/codingChallenge/StringToInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/codingChallenge/StringToInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/main/java/codingChallenge/ValidParenthesis.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/main/java/codingChallenge/ValidParenthesis.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,11 +44,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Karen/Documents/Jarvis/jarvis_data_eng_karen/core_java/pom.xml"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,8 +61,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647626959792</updated>
+      <workItem from="1658239690630" duration="2424000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
