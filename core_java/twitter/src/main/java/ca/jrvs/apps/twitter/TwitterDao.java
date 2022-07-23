@@ -5,7 +5,6 @@ import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
 import ca.jrvs.apps.twitter.model.Tweet;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.net.URI;
@@ -30,20 +29,6 @@ public class TwitterDao implements CrdDao<Tweet, String> {
         this.httpHelper = httpHelper;
     }
 
-    @Override
-    public Tweet create(Tweet tweet) {
-
-        URI uri;
-        try {
-            uri = getPostUri(tweet);
-        } catch (URISyntaxException /*| UnsupportedEncodingException*/ e) {
-            throw new IllegalArgumentException("Invalid tweet input", e);
-        }
-
-        HttpResponse response = httpHelper.httpPost(uri);
-
-        return parseResponseBody(response, HTTP_OK);
-    } //HttpPost("http://api.twitter.com/1.1/statuses/update.json?status=Hello%20Twitter%20World.");
 
     private Tweet parseResponseBody(HttpResponse response, Integer expectedStatusCode) {
         Tweet tweet = null;
@@ -75,17 +60,59 @@ public class TwitterDao implements CrdDao<Tweet, String> {
         return tweet;
     }
 
-    private URI getPostUri(Tweet tweet) throws URISyntaxException {
-        return new URI(API_BASE_URI + POST_PATH + QUERY_SYM + "status=" + "testing123");
+
+    @Override
+    public Tweet create(Tweet tweet) {
+
+        URI uri;
+        try {
+            uri = getPostUri(tweet);
+        } catch (URISyntaxException e) {
+            throw new IllegalArgumentException("Invalid tweet input", e);
+        }
+
+        HttpResponse response = httpHelper.httpPost(uri);
+
+        return parseResponseBody(response, HTTP_OK);
     }
 
     @Override
     public Tweet findById(String s) {
-        return null;
+        URI uri;
+        try {
+            uri = getShowUri(s);
+        } catch (URISyntaxException e) {
+            throw new IllegalArgumentException("Invalid id", e);
+        }
+
+        HttpResponse response = httpHelper.httpGet(uri);
+
+        return parseResponseBody(response, HTTP_OK);
     }
 
     @Override
     public Tweet deleteById(String s) {
-        return null;
+        URI uri;
+        try {
+            uri = getDeleteUri(s);
+        } catch (URISyntaxException e) {
+            throw new IllegalArgumentException("Invalid id", e);
+        }
+
+        HttpResponse response = httpHelper.httpPost(uri);
+
+        return parseResponseBody(response, HTTP_OK);
+    }
+
+    private URI getPostUri(Tweet tweet) throws URISyntaxException {
+        return new URI(API_BASE_URI + POST_PATH + QUERY_SYM + "status" + EQUAL + tweet.getText() + AMPERSAND + "lat" + EQUAL + tweet.getCoordinates().getCoordinates().get(1) + AMPERSAND + "lon" + EQUAL + tweet.getCoordinates().getCoordinates().get(0));
+    }
+
+    private URI getShowUri(String id) throws URISyntaxException {
+        return new URI(API_BASE_URI +SHOW_PATH+QUERY_SYM+"id"+EQUAL+id);
+    }
+
+    private URI getDeleteUri(String id) throws URISyntaxException {
+        return new URI(API_BASE_URI +DELETE_PATH+QUERY_SYM+"id"+EQUAL+id);
     }
 }

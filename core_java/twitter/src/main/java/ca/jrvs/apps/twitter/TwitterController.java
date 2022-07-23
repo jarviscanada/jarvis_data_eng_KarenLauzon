@@ -47,10 +47,9 @@ public class TwitterController implements Controller {
 
     @Override
     public Tweet showTweet(String[] args) {
-        String id = args[0];
-        String[] fields = new String[args.length - 1];
-        //noinspection ManualArrayCopy
-        for (int index = 1; index <= args.length; index++) {
+        String id = args[1];
+        String[] fields = new String[args.length];
+        for (int index = 1; index < args.length; index++) {
             fields[index - 1] = args[index];
         }
         if (id == null) {
@@ -61,10 +60,10 @@ public class TwitterController implements Controller {
 
     @Override
     public List<Tweet> deleteTweet(String[] args) {
-        if (args.length != 1) {
+        if (args.length != 2) {
             throw new IllegalArgumentException("USAGE: TwitterCLIApp delete [id1,id2,..] ");
         }
-        String[] ids = args[0].split(",");
+        String[] ids = args[1].split(",");
 
         return service.deleteTweets(ids);
     }
