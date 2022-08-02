@@ -37,7 +37,9 @@ order by timenew  ;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="101c5ace-6e99-4424-985b-359b4f8ca09c" object-ref="consoles/host_agent" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="101c5ace-6e99-4424-985b-359b4f8ca09c" />
@@ -70,7 +72,9 @@ order by timenew  ;]]></console>
     <diagnostics-history />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="POSTGRES" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
